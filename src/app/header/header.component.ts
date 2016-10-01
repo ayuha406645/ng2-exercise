@@ -16,8 +16,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  num: number = 11;
+
   changeTitle($event: MouseEvent|KeyboardEvent) {
-    console.log($event);
+
+    this.num++;
+
     if ($event.shiftKey) {
       this.title = this.title + '!';
     }
