@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'app works!gooooood';
 
   myname = '123';
+  keyword: string = 'test';
 }
