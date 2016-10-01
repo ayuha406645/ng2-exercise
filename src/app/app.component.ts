@@ -11,9 +11,7 @@ export class AppComponent {
   myname = '123';
   keyword: string = 'test';
 
-  tokeyword ($event: KeyboardEvent, keyword: string) {
-    if ($event.keyCode === 13) {
-      this.keyword = keyword;
-    }
+  tokeyword (keyword: string) {
+    this.keyword = keyword;
   }
 }
