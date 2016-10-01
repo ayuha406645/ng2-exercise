@@ -11,10 +11,10 @@ export class AppComponent {
   myname = '123';
   keyword: string = 'test';
 
-  tokeyword ($event,$value) {
-    if ($event.code === 'Enter') {
-      console.log($event, $value);
-      this.keyword = $value;
+  tokeyword ($event: KeyboardEvent) {
+    let inputDom = $event.target as HTMLInputElement;
+    if ($event.keyCode === 13) {
+      this.keyword = inputDom.value;
     }
   }
 }
